@@ -1,10 +1,14 @@
-<form action="/get" target="hidden-form">
-  inputString (current value %inputString%): <input type="text" name="inputString">
-  <input type="submit" value="Submit" onclick="submitMessage()">
-</form>
-<script>
-  function submitMessage() {
-    alert("Saved value to ESP SPIFFS");
-    setTimeout(function(){ document.location.reload(false); }, 500);
-  }
-</script>
+<html>
+    <head>
+        <title>Receiving data from ESP8266</title>
+        <!-- Link to Grandeur -->
+        <script src="https://unpkg.com/grandeur-js"></script>
+        <link rel="stylesheet" href="./main.css">
+    </head>
+    <body>
+        <h1>Receiving data from ESP8266 &nbsp</h1>
+        <h1 class="loader">/</h1>
+        <p id="data">–</p>
+        <script src="./index.js"></script>
+    </body>
+</html>
