@@ -1,0 +1,10 @@
+<form action="/get" target="hidden-form">
+  inputString (current value %inputString%): <input type="text" name="inputString">
+  <input type="submit" value="Submit" onclick="submitMessage()">
+</form>
+<script>
+  function submitMessage() {
+    alert("Saved value to ESP SPIFFS");
+    setTimeout(function(){ document.location.reload(false); }, 500);
+  }
+</script>
