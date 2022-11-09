@@ -1,10 +1,26 @@
-const apiKey = YourApiKey;
-const accessKey = YourAccessKey;
-const accessToken = YourAccessToken;
+const char jscript[] PROGMEM={"
+setInterval(\"temp1()\",500);
+function temp1(){
+ var some =\"/temp1\";
+$.ajax({url: some, dataType: \"text\",
+success: function(response){$(\"#temp\").html(\"temp=\"+response+\"C\");
+},timeout: 1000})} 
 
-// This connects the webpage to the internet.
-const project = grandeur.init(apiKey, accessKey, accessToken);
-project.auth().login(YourUserEmail, YourUserPassword);
+setInterval(\"workshow()\",500);
+function workshow(){
+ var some =\"/worknew\";
+$.ajax({url: some, dataType: \"text\",
+success: function(response){$(\"#work\").html(response);},timeout: 1000})}
 
-// This subscribes to the "millis" variable.
-project.devices().device(YourDeviceId).data().on("millis", (path, value) => document.getElementById("data").innerHTML = value);
+setInterval(\"workshow2()\",600);
+function workshow2(){
+ var some =\"/worknew2\"; $.ajax({url: some, dataType: \"text\",
+ success: function(response){$(\"#work2\").html(response);},timeout: 1000})} 
+
+function dooron() {
+ var someUrl = \"/don\";
+  $.ajax({ url: someUrl,timeout: 1000})}
+
+function dooroff()
+ { var someUrl = \"/dof\"; $.ajax({ url: someUrl, timeout: 1000}) }
+"};
